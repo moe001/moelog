@@ -240,3 +240,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/moelog_main/dist
+/moelog_main/moelog/__pycache__
+/moelog_main/moelog.egg-info
