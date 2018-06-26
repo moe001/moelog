@@ -2,6 +2,8 @@
 import logging
 import sys
 
+__logger_record = {}
+
 def get_logger(logger_name='moelog',logging_level=logging.INFO,both_to_file_path=None):
     '''
     example:
@@ -10,8 +12,12 @@ def get_logger(logger_name='moelog',logging_level=logging.INFO,both_to_file_path
     l.i('foo')
     '''
 
+    if logger_name in __logger_record:
+        result = __logger_record[logger_name]
+    else:
+        result = logging.getLogger(logger_name)
+        __logger_record[logger_name] = result
 
-    result = logging.getLogger(logger_name)
     assert isinstance(result,logging.Logger)
 
     result.setLevel(logging_level)
