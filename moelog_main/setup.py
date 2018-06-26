@@ -4,7 +4,7 @@
 from setuptools import setup, find_packages
 
 setup(name='moelog',
-      version='0.0.0.1',
+      version='0.0.0.2',
       description='A easy to use Logger',
       author='moe001',
       author_email='i@001.moe',
