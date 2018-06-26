@@ -14,9 +14,10 @@ def get_logger(logger_name='moelog',logging_level=logging.INFO,both_to_file_path
 
     if logger_name in __logger_record:
         result = __logger_record[logger_name]
-    else:
-        result = logging.getLogger(logger_name)
-        __logger_record[logger_name] = result
+        return result
+
+    result = logging.getLogger(logger_name)
+    __logger_record[logger_name] = result
 
     assert isinstance(result,logging.Logger)
 
